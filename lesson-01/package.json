@@ -1,0 +1,12 @@
+{
+  "name": "lesson-01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Igor A1",
+  "license": "ISC",
+  "dependencies": {
+    "chalk-animation": "^1.6.0",
+    "sound-play": "^1.0.5"
+  }
+}
