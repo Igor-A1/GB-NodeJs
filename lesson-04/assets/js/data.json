@@ -1,0 +1,114 @@
+[
+  {
+    "title": "HiTech.NEWSru",
+    "url": "https://hitech.newsru.com/",
+    "charset": "win1251",
+    "filter": ".index-news-title",
+    "selected": false,
+    "cat": [
+      {
+        "title": "интернет",
+        "selected": false,
+        "url": "/tags/4213"
+      },
+      {
+        "title": "софт",
+        "selected": false,
+        "url": "/tags/4203"
+      },
+      {
+        "title": "наука",
+        "selected": false,
+        "url": "/tags/4218"
+      },
+      {
+        "title": "игры",
+        "selected": false,
+        "url": "/tags/4228"
+      },
+      {
+        "title": "роботы",
+        "selected": false,
+        "url": "/tags/4223"
+      }
+    ]
+  },
+  {
+    "title": "InoPressa",
+    "url": "https://www.inopressa.ru/",
+    "charset": "win1251",
+    "filter": "h2",
+    "selected": false,
+    "cat": [
+      {
+        "title": "сегодня",
+        "selected": false,
+        "url": "today"
+      },
+      {
+        "title": "история и культура",
+        "selected": false,
+        "url": "rubrics/culture"
+      },
+      {
+        "title": "скандалы и происшествия",
+        "selected": false,
+        "url": "rubrics/incident"
+      },
+      {
+        "title": "наука и жизнь",
+        "selected": false,
+        "url": "rubrics/science"
+      },
+      {
+        "title": "аналитика",
+        "selected": false,
+        "url": "rubrics/analytics"
+      }
+    ]
+  },
+  {
+    "title": "MEDdaily",
+    "url": "http://www.meddaily.ru/",
+    "charset": "win1251",
+    "filter": ".news_block .topic_title",
+    "selected": false,
+    "cat": [
+      {
+        "title": "в мире",
+        "selected": false,
+        "url": "rubric/682"
+      },
+      {
+        "title": "генетика",
+        "selected": false,
+        "url": "rubric/694"
+      },
+      {
+        "title": "запрет",
+        "selected": false,
+        "url": "rubric/684"
+      },
+      {
+        "title": "изобретение",
+        "selected": false,
+        "url": "rubric/688"
+      },
+      {
+        "title": "курение",
+        "selected": false,
+        "url": "rubric/789"
+      },
+      {
+        "title": "технология",
+        "selected": false,
+        "url": "rubric/691"
+      },
+      {
+        "title": "психология",
+        "selected": false,
+        "url": "rubric/677"
+      }
+    ]
+  }
+]

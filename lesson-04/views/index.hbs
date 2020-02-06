@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NodeJS :: Задание 4</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Урок № 4 :: Фреймворк Express</h1>
+    </header>
+    
+    <main>
+      <form action="/load" id="filters" method="post">
+      
+        <fieldset>
+
+          <div class="row">
+            <label for="source">источник:</label>
+            <select name="source" id="source" onchange="changeCathegories(this.value)">
+              {{#each source}}
+                <option value="{{@index}}"{{#if this.selected}} selected="selected"{{/if}}>{{this.title}}</option>
+              {{/each}}
+            </select>
+          </div>
+          
+          <div class="row">
+            <label for="cathegory">категория:</label>
+            <select name="cathegory" id="cathegory">
+              {{#each cathegory}}
+                <option value="{{@index}}"{{#if this.selected}} selected="selected"{{/if}}>{{this.title}}</option>
+              {{/each}}
+            </select>
+          </div>
+          
+          <div class="row">
+            <label for="count">количество новостей:</label>
+            <input name="count" id="count" type="number" min={{minCount}} max={{maxCount}} step=1 value={{count}}>
+          </div>
+        
+        <div class="row">
+            <input type="submit" value="загрузить !">
+        </div>
+        
+        </fieldset>
+
+      </form>
+      
+      <div id="output">{{output}}</div>
+    
+    </main>
+    
+    <footer>
+      <p class="copyright">Copyright &copy; 2020 - All Rights Reserved</p>
+    </footer>
+
+    <script src="./js/start.js"></script>
+
+</body>
+</html>

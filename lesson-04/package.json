@@ -1,0 +1,29 @@
+{
+  "name": "lesson-04",
+  "version": "1.0.0",
+  "main": "app.js",
+  "nodemonConfig": {
+    "ignore": [
+      "assets/*"
+    ]
+  },
+  "scripts": {
+    "serve": "nodemon app.js",
+    "cli": "node client.js"
+  },
+  "author": "Igor-A1",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "consolidate": "^0.15.1",
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "handlebars": "^4.7.2",
+    "iconv-lite": "^0.5.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
