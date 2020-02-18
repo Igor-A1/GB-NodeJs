@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NodeJS :: Задание 5-6-7</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <fieldset id="user_panel">
+        <div class="row">
+          <button class="item" id="start" onclick="document.location='/'" title="на главную страницу"><i class="fas fa-2x fa-home"></i></button>
+          <h1 class="item">Мои Заметки</h1>
+          <div class="item" id="avatar"><i class="fa fa-2x fa-sign-in-alt"></i></div>
+          <div class="item">Вход</div>
+        </div>
+      </fieldset>
+    </header>
+    
+    <main>
+    
+      <form id="login" action="/auth/login" method="post">
+        <input name="login" type="text" placeholder="&#128526; введите свой логин">
+        <input name="password" type="password" placeholder="&#128274; введите свой пароль">
+        <p id="warning">{{warning}}</p>
+        <input type="submit" value="Войти" />
+      </form>
+      
+    </main>
+    
+    <footer>
+      <p class="copyright">Copyright &copy; 2020 - All Rights Reserved</p>
+    </footer>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+</body>
+</html>
