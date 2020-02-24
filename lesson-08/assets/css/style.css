@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin: 3px 10px;
+}
+
+.roomJoined {
+  color: blue;
+  font-weight: bold;
+}
+
+.messages {
+  border: 1px solid black;
+  min-height: 50px;
+  display: none;
+}
+
+.active {
+  border: 3px groove black;
+}

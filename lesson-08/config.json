@@ -1,0 +1,15 @@
+{
+  "db": {
+    "cluster": "cluster0",
+    "db": "test",
+    "user": "new_user",
+    "password": "GeekBrains"
+  },
+  "serve": {
+    "url": "http://localhost",
+    "port": 3035
+  },
+  "cli": {
+    "port": 3036
+  }
+}
