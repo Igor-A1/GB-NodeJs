@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NodeJS :: Задание 5-6-7</title>
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <fieldset id="user_panel">
+        <div class="row">
+          <button class="item" id="start" onclick="document.location='/'" title="на главную страницу"><i class="fas fa-2x fa-home"></i></button>
+          <h1 class="item">Мои Заметки</h1>
+          <div class="item" id="avatar"><i class="fa fa-2x fa-user-circle"></i></div>
+          <div class="item" id="fullname">{{userName}}</div>
+        </div>
+      </fieldset>
+    </header>
+    
+    <main>
+      
+      <form class="note" id="new_note" action="{{action}}" method="post">
+        <input name="id" type="hidden" value="{{data._id}}">
+        <input name="title" type="text" placeholder="введите название" value="{{data.title}}">
+        <textarea name="body" rows="10" placeholder="введите текст">{{data.body}}</textarea>
+        <input name="tags" type="text" placeholder="тэги для поиска" value="{{data.tags}}">
+        <p id="warning">{{warning}}</p>
+        <div class="row">
+          <button onclick="history.back()" title="вернуться назад"><i class="far fa-hand-point-left"></i></button>
+          <input type="submit" title="cохранить" value="Сохранить">
+        </div>
+      </form>
+    
+    </main>
+    
+    <footer>
+      <p class="copyright">Copyright &copy; 2020 - All Rights Reserved</p>
+    </footer>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+
+</body>
+</html>

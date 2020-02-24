@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NodeJS :: Задание 5-6-7</title>
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <fieldset id="user_panel">
+        <div class="row">
+          <h1 class="item">Мои Заметки</h1>
+          <div class="item" id="avatar"><i class="fa fa-2x fa-user-circle"></i></div>
+          <div class="item" id="fullname">{{userName}}</div>
+          {{#if isAuth}}
+          <button class="item" id="logout" onclick="document.location='/auth/logout'" title="выйти"><i class="fas fa-2x fa-door-closed"></i></button>
+          <button class="item" id="new_note" onclick="document.location='/add'"  title="добавить новую заметку"><i class="far fa-2x fa-file-alt"></i></button>
+          {{else}}
+          <button class="item" id="login" onclick="document.location='/auth/login'" title="войти"><i class="fas fa-2x fa-door-open"></i></button>
+          <button class="item" id="signup" onclick="document.location='/auth/signup'" title="зарегистрироваться"><i class="fas fa-2x fa-user-plus"></i></button>
+          {{/if}}
+        </div>
+      </fieldset>
+    </header>
+    
+    <main>
+      
+      <section id="notes_list">
+        {{#if isAuth}}
+        {{#each notes}} 
+        <article class="note{{#if even}} even{{/if}}">
+          <div class="head row">
+            <div class="title"><h2>{{title}}</h2></div>
+            <div class="date" title="дата последнего редактирования">{{ruDate}}</div>
+          </div>
+          <div class="body">{{body}}</div>
+          <div class="control row">
+            <div class="tags" title="тэги для поиска">{{tags}}</div>
+            <div>
+              <button title="редактировать" class="edit" onclick="gotoEdit('{{_id}}')"><i class="far fa-edit"></i></button>
+              <button title="удалить безвозвратно" class="delete" onclick="confirmDelete('{{_id}}')"><i class="far fa-trash-alt"></i></button>
+            </div>
+          </div>
+        </article>
+        {{/each}}
+        {{else}}
+        {{#each notes}} 
+        <article class="note{{#if even}} even{{/if}}">
+          <div class="head row">
+            <div class="title"><h2>{{title}}</h2></div>
+            <div class="date" title="дата последнего редактирования">{{ruDate}}</div>
+          </div>
+          <div class="body">{{body}}</div>
+          <div class="control row">
+            <div class="tags" title="тэги для поиска">{{tags}}</div>
+          </div>
+        </article>
+        {{/each}}
+        {{/if}}
+        
+      </section>
+    
+    </main>
+    
+    <footer>
+      <p class="copyright">Copyright &copy; 2020 - All Rights Reserved</p>
+    </footer>
+
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <script src="./js/start.js"></script>
+
+</body>
+</html>
